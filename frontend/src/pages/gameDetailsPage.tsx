@@ -65,12 +65,7 @@ const GameDetailsPage = () => {
         reset: gameReset,
         formState: { errors: gameErrors, isSubmitting: gameIsSubmitting }
     } = useForm<GameDetailsFormFields>({
-        resolver: zodResolver(gameSchema),
-        defaultValues: {
-            status: "plan to play",
-            rating: "0",
-            notes: ""
-        }
+        resolver: zodResolver(gameSchema)
     });
 
     const onGameSubmit: SubmitHandler<GameDetailsFormFields> = async (data) => {
@@ -208,7 +203,6 @@ const GameDetailsPage = () => {
                                                                 <Label>Status</Label>
                                                                 <FormField control={gameControl} name="status" render={({ field }) => (
                                                                     <Select 
-                                                                    defaultValue={ userGameDetails.status ? userGameDetails.status : "plan to watch" }
                                                                     onValueChange={field.onChange}>
                                                                         <SelectTrigger>
                                                                             <SelectValue placeholder="Select a status" />

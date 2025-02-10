@@ -65,12 +65,7 @@ const MovieDetailsPage = () => {
         reset: movieReset,
         formState: { errors: movieErrors, isSubmitting: movieIsSubmitting }
     } = useForm<MovieDetailsFormFields>({
-        resolver: zodResolver(movieSchema),
-        defaultValues: {
-            status: "plan to watch",
-            rating: "0",
-            notes: ""
-        }
+        resolver: zodResolver(movieSchema)
     });
 
     const onMovieSubmit: SubmitHandler<MovieDetailsFormFields> = async (data) => {
@@ -208,7 +203,6 @@ const MovieDetailsPage = () => {
                                                                 <Label>Status</Label>
                                                                 <FormField control={movieControl} name="status" render={({ field }) => (
                                                                     <Select 
-                                                                    defaultValue={ userMovieDetails.status ? userMovieDetails.status : "plan to watch" }
                                                                     onValueChange={field.onChange}>
                                                                         <SelectTrigger>
                                                                             <SelectValue placeholder="Select a status" />

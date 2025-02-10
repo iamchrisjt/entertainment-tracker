@@ -66,12 +66,7 @@ const TvShowDetailsPage = () => {
         reset: tvShowReset,
         formState: { errors: tvShowErrors, isSubmitting: tvShowIsSubmitting }
     } = useForm<TvShowDetailsFormFields>({
-        resolver: zodResolver(tvShowSchema),
-        defaultValues: {
-            status: "plan to watch",
-            rating: "0",
-            notes: ""
-        }
+        resolver: zodResolver(tvShowSchema)
     });
 
 
@@ -210,7 +205,6 @@ const TvShowDetailsPage = () => {
                                                                 <Label>Status</Label>
                                                                 <FormField control={tvShowControl} name="status" render={({ field }) => (
                                                                     <Select 
-                                                                    defaultValue={ userTvShowDetails.status ? userTvShowDetails.status : "plan to watch" }
                                                                     onValueChange={field.onChange}>
                                                                         <SelectTrigger>
                                                                             <SelectValue placeholder="Select a status" />

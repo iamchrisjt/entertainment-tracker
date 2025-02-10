@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosUserInstance = axios.create({
-    baseURL: (import.meta.env.NODE_ENV === "development") ? import.meta.env.VITE_BACKEND_HOST + "/api" : "/api", // the base URL for the API
+    baseURL: (import.meta.env.VITE_NODE_ENV === "development") ? import.meta.env.VITE_BACKEND_HOST + "/api" : "/api", // the base URL for the API
     withCredentials: true // send cookies with requests
 });
 

@@ -9,7 +9,7 @@ interface ImportMetaEnv {
     VITE_GAME_API: string;
     VITE_BACKEND_HOST: string;
     VITE_CORS_HOST: string;
-    NODE_ENV: "development" | "production";
+    VITE_NODE_ENV: "development" | "production";
 }
 
 interface ImportMeta {

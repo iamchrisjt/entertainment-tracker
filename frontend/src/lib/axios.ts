@@ -26,7 +26,6 @@ export const axiosIGDBInstance = axios.create({
         "Accept": "application/json",
         "Content-Type": "text/plain",
         "Client-ID": `${import.meta.env.VITE_GAME_CLIENT_ID}`,
-        "Authorization": `Bearer ${import.meta.env.VITE_GAME_API}`, // add your API key here
-        "Access-Control-Allow-Origin": "*"
+        "Authorization": `Bearer ${import.meta.env.VITE_GAME_API}` // add your API key here
     }
 });

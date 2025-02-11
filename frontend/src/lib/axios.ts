@@ -21,7 +21,7 @@ export const axiosRAWGInstance = axios.create({
 });
 
 export const axiosIGDBInstance = axios.create({
-    baseURL: import.meta.env.VITE_CORS_HOST + "/https://api.igdb.com/v4/", // the base URL for the API
+    baseURL: import.meta.env.VITE_CORS_HOST + "https://api.igdb.com/v4/", // the base URL for the API
     headers: {
         "Accept": "application/json",
         "Content-Type": "text/plain",

@@ -77,7 +77,7 @@ const ViewItems : React.FC<ViewItemsProps> = (props) => {
                     </Pagination>
 
                     {/* Item list */}
-                    <div className="grid grid-cols-4 gap-4">
+                    <div className="grid sm:grid-cols-4 grid-cols-2 gap-4">
                         {props.itemList.map(item => {
                             return <props.itemDisplayComponent key={item.id} {...item}/>
                         })}
